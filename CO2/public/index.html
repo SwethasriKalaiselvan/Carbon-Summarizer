@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Search Engine Carbon Emissions Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Search Engine Carbon Footprint Tracker</h1>
+        <p>Daily Environmental Impact of Search Queries</p>
+        <div id="current-date">Today's Date: <span></span></div>
+    </header>
+
+    <main>
+        <section id="daily-summary">
+            <h2>Today's Statistics</h2>
+            <div class="data-container">
+                <div class="data-item">
+                    <p>Total Searches Today:</p>
+                    <span id="total-searches">Fetching...</span>
+                    <small>searches</small>
+                </div>
+                <div class="data-item">
+                    <p>Current Search Rate:</p>
+                    <span id="current-searches">Fetching...</span>
+                    <small>searches per second</small>
+                </div>
+                <div class="data-item">
+                    <p>Peak Search Rate Today:</p>
+                    <span id="peak-search-rate">Fetching...</span>
+                    <small>searches per second</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="energy-metrics">
+            <h2>Energy Consumption</h2>
+            <div class="data-container">
+                <div class="data-item">
+                    <p>Total Energy Used Today:</p>
+                    <span id="total-energy">Calculating...</span>
+                    <small>kilowatt-hours (kWh)</small>
+                </div>
+                <div class="data-item energy-mix">
+                    <p>Energy Source Mix:</p>
+                    <div class="progress-bar">
+                        <div id="renewable-progress" class="progress renewable"></div>
+                        <div id="non-renewable-progress" class="progress non-renewable"></div>
+                    </div>
+                    <div class="energy-labels">
+                        <span class="renewable-label">Renewable</span>
+                        <span class="non-renewable-label">Non-Renewable</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="emission-calculations">
+            <h2>Carbon Emissions</h2>
+            <div class="calculation-container">
+                <div class="calculation-item">
+                    <p>Current Rate:</p>
+                    <span id="carbon-per-second">Calculating...</span>
+                    <small>kg CO₂ per second</small>
+                </div>
+                <div class="calculation-item">
+                    <p>Hourly Rate:</p>
+                    <span id="carbon-per-hour">Calculating...</span>
+                    <small>kg CO₂ per hour</small>
+                </div>
+                <div class="calculation-item highlighted">
+                    <p>Total Today:</p>
+                    <span id="total-carbon-emitted">Calculating...</span>
+                    <small>kg CO₂</small>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact-visualization">
+            <h2>Real-Time Emissions Chart</h2>
+            <div id="chart-container">
+                <canvas id="emission-chart"></canvas>
+            </div>
+        </section>
+
+        <section id="environmental-context">
+            <h2>Environmental Impact Context</h2>
+            <div id="impact-equivalents" class="data-container">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data is updated every 5 seconds. All calculations are estimates based on average data center energy consumption and regional carbon intensity factors.</p>
+        <p>&copy; 2024 Search Engine Carbon Emissions Tracker</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
