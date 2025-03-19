@@ -1,0 +1,19 @@
+{% %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Document</title>
+</head>
+
+
+<div class="home">
+    
+<div class='article'>
+<h1 class='title'>{{%% article.get('title') %%}}</h1>
+<p>{{article.get('description')}}</p>
+<p>{{article.get('summary')}}</p>
+<a href="{{article.get('url')}}">Read More</a>
+</div>
